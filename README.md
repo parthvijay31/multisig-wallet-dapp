@@ -60,3 +60,15 @@ This is a **2-of-N Multi-Signature Wallet**, where a transaction must be approve
 - contracts/ → Solidity smart contracts
 - frontend/ → Next.js frontend
 - scripts/ → Deployment scripts
+
+## Screenshots
+
+### Home
+![Home](./screenshots/home.jpeg)
+
+### Create Transaction
+![Create Tx](./screenshots/create-tx.jpeg)
+
+### Pending Transactions
+![Pending Tx](./screenshots/pending-tx.jpeg)
+
