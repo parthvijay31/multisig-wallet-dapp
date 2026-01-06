@@ -28,10 +28,33 @@ A fully functional **Multi-Signature Ethereum Wallet DApp** built using
 - Secure execution logic
 - Owner-only actions enforced
 
-##  Workflow
-1. Owner submits a transaction
-2. Other owner approves it
-3. Transaction executes once approvals are met
+##  How It Works
+
+This is a **2-of-N Multi-Signature Wallet**, where a transaction must be approved by multiple owners before execution.
+
+###  Workflow
+
+1. **Create Transaction**
+   - Any owner can create a transaction by specifying:
+     - Recipient address
+     - Amount of ETH
+   - The transaction is stored on-chain and marked as *pending*.
+
+2. **Approve Transaction**
+   - Other wallet owners can approve the pending transaction.
+   - Each owner can approve **only once**.
+   - Approval count increases with each valid approval.
+
+3. **Execute Transaction**
+   - Once the required number of approvals is reached:
+     - Any owner can execute the transaction.
+     - ETH is transferred from the multisig wallet.
+     - Transaction is marked as *executed*.
+
+4. **Security Guarantees**
+   - Transactions cannot be executed twice.
+   - Non-owners cannot approve or execute transactions.
+   - Full transparency via on-chain state and UI.
 
 ##  Project Structure
 - contracts/ → Solidity smart contracts
